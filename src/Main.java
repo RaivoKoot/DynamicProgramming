@@ -80,8 +80,12 @@ public class Main {
 	public static void main(String[] args) {
 		int[] videos = { 4, 3, 2, 7, 2 };
 		int max_time = 40;
-
-		printArray(bottomUpAchievableLength(videos, max_time));
+		Playlist[][] solutions = bottomUpAchievableLength(videos, max_time);
+		printArray(solutions);
+		
+		System.out.println(solutions[10][4].getLength());
+		System.out.println(solutions[10][4].getVideo_indices());
+		
 
 	}
 
